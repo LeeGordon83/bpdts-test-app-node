@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>User Search Application</h1>      
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-info" style="background-color: white">
+        <div class="panel-body">
+          <form id='search' action='/index' autocomplete='off' method='POST'>
+            <div class="col-md-4 offset-md-4">
+              <label class="form-label" for="select-box" style="font-weight: bold;">City: - </label>
+              <select class="form-control" id="city" name="city">
+                  <option value="London" selected="selected">London</option>
+              </select>
+          </div>
+          <div class="col-md-4 offset-md-4" style="padding-top: 10px;">
+              <label class="form-label" for="select-box" style="font-weight: bold;">Distance (Miles): - </label>
+              <select class="form-control" id="distance" name="distance">
+                  <option value="50" selected="selected">50</option>
+                  <option value="25">25</option>
+                  <option value="10">10 </option>
+                  <option value="5">5</option>
+              </select>
+          </div>
+          </form>
+          <div id='col-md-4 offset-md-4' style="padding-top: 10px;">
+            <input class='NavButton centre' form='search' type='submit' value='Search'>
+          </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
