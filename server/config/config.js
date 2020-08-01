@@ -1,12 +1,13 @@
 
 const config = {
   app: {
-    port: 3000
+    port: 8000
   },
-  db: {
-    host: 'localhost',
-    port: 27017,
-    name: 'db'
+  api: {
+    base: 'https://bpdts-test-app.herokuapp.com'
+  },
+  other: {
+    london: { latitude: 51.509865, longitude: -0.118092 }
   }
 }
 

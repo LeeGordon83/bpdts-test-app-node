@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  bpdts_test_app_node:
+    build: 
+      context: .
+      target: production
+    image: bpdtstestapp
+    environment:
+      PORT: 8000
+    volumes:
+      - ./server/:/home/node/server/
+      - ./config/:/home/node/migrations/
+      - ./views/:/home/node/views/
+      - ./index.js:/home/node/index.js
+      - ./package.json:/home/node/package.json
+    ports:
+      - "8000:8000"

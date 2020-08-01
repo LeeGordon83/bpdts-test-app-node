@@ -1,8 +1,9 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
+const config = require('./server/config/config')
 const expressLayouts = require('express-ejs-layouts')
-const port = parseInt(process.env.PORT, 10) || 8000
+const port = config.app.port
 
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
