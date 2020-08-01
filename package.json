@@ -7,10 +7,13 @@
     "dev": "nodemon ./index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "lee-gordon",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "dependencies": {
     "axios": "^0.19.2",
