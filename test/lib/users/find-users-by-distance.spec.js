@@ -14,16 +14,14 @@ afterEach(async () => {
   sandbox.restore()
 })
 
-sandbox.stub(tools, 'userapi').returns(mockedUsers)
-
 describe('find users by distance function', function () {
   it('expects an array of London users to be returned', async function () {
     // Arrange
-
+    sandbox.stub(tools, 'userapi').returns(mockedUsers)
     // Act
     const response = await usersByDistance.findUsersByDistance('London', 50)
 
     // Assert
-    expect(response.data.length).to.equal(3)
+    expect(response.length).to.equal(3)
   })
 })
