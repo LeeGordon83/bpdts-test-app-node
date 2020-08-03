@@ -2,7 +2,7 @@ const config = require('../../../server/config/config')
 
 async function distanceCalculator (users, city, distance) {
   const usersFound = []
-  users.data.forEach(async (user) => {
+  users.forEach(async (user) => {
     const between = distanceCalc(user.latitude, user.longitude, config.other.london.latitude, config.other.london.longitude)
     if (between <= distance) {
       usersFound.push(user)
