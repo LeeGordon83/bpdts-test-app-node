@@ -25,21 +25,33 @@ Development:
 - Sinon
 
 ## Run application locally
+
+```
 $ git clone https://github.com/LeeGordon83/bpdts-test-app-node.git
+
 $ npm install --save-dev
+
 $ nodemon
 
+```
 Navigate to http://localhost:8000/
 
 ## Run application in Docker
 
+```
 $ git clone https://github.com/LeeGordon83/bpdts-test-app-node.git
+
 $ docker-compose build
+
 $ docker-compose up
 
+```
 ## Run tests locally
+
+```
 $ npm test
 
+```
 ## Run tests Docker
 TBC
 
