@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  bpdts_test_app_node:
+  bpdts-test-app-node:
     build: 
       context: .
       target: production

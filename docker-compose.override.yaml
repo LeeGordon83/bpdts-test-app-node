@@ -1,0 +1,14 @@
+version: '3.7'
+
+# This override file should be used when running this service in isolation
+# to provide required sibling services for local testing
+
+services:
+  bpdts-test-app-node:
+    build:
+      context: .
+      target: development
+    image: bpdtstestapp
+    command: >
+      sh -c "
+      nodemon ./index.js"

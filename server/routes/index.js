@@ -1,10 +1,10 @@
-const users = require('../lib/users')
+const { findUsersByCity, findUsersByDistance } = require('../lib/users')
 
 module.exports = {
   get: async (req, res) => {
-    const usersCity = await users.findUsersByCity('London')
-    const usersDistance = await users.findUsersByDistance('London', 50)
-    const combinedUsers = [...new Set([...usersCity.data, ...usersDistance])]
+    const usersWithinLondon = await findUsersByCity()
+    const usersWithinDistance = await findUsersByDistance()
+    const combinedUsers = [...new Set([...usersWithinLondon.data, ...usersWithinDistance])]
     res.json(combinedUsers)
   }
 }

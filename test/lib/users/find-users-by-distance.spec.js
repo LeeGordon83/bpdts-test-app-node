@@ -17,7 +17,7 @@ afterEach(async () => {
 describe('find users by distance function', function () {
   it('expects an array of London users to be returned', async function () {
     // Arrange
-    sandbox.stub(tools, 'userapi').returns(mockedUsers)
+    sandbox.stub(tools, 'callUserApi').returns(mockedUsers)
     // Act
     const response = await usersByDistance.findUsersByDistance('London', 50)
 

@@ -1,9 +1,9 @@
 const tools = require('../tools')
+const config = require('../../../server/config/config')
 
-async function findUsersByCity (city) {
-  const searchstring = '/city/' + city + '/users'
-  const users = await tools.userapi(searchstring)
-  return users
+async function findUsersByCity () {
+  const queryString = `/city/${config.cities.london.name}/users`
+  return tools.callUserApi(queryString)
 }
 
 module.exports = {

@@ -1,17 +1,20 @@
 const axios = require('axios')
 const config = require('../../../server/config/config')
 
-async function userapi (searchstring) {
+async function callUserApi (queryString) {
+  const apiconfig = createApiConfig(queryString)
+  return axios(apiconfig)
+}
+
+function createApiConfig (queryString) {
   const apiconfig = {
     method: 'get',
-    url: config.api.base + searchstring
+    url: config.api.base + queryString
   }
-
-  const users = await axios(apiconfig)
-
-  return users
+  return apiconfig
 }
 
 module.exports = {
-  userapi
+  callUserApi,
+  createApiConfig
 }

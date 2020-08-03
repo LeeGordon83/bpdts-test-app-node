@@ -1,35 +1,32 @@
 const { expect } = require('chai')
-
-const { distanceCalculator, distanceCalc } = require('../../../server/lib/tools/distance-calculator')
-const mockedUsers = require('../../mock/users')
+const { checkUserDistances, calculateDistanceFromTargetCity } = require('../../../server/lib/tools/distance-calculator')
+const mockedUsers = require('../../mock/users.json')
 
 describe('distance-calculator.js', function () {
-  describe('distanceCalculator function', function () {
+  describe('check user distance function', function () {
     it('expects an array of users to be returned', async function () {
       // Arrange
       const users = mockedUsers
-      const city = 'London'
       const distance = 50
-
       // Act
-      const response = await distanceCalculator(users, city, distance)
-
+      const response = await checkUserDistances(users, distance)
       // Assert
       expect(response.length).to.equal(3)
     })
   })
-
-  describe('distanceCalculator function', function () {
-    it('expects the distance between two points to be calculated (different points)', function () {
+  describe('distance from target city function', function () {
+    it('calculates the distance between two coordinates in miles', async function () {
       // Arrange
-      const lat1 = 1
-      const lon1 = 1
-      const lat2 = 2
-      const lon2 = 2
-
+      const location1 = {
+        longitude: 1,
+        latitude: 1
+      }
+      const location2 = {
+        longitude: 2,
+        latitude: 2
+      }
       // Act
-      const response = distanceCalc(lat1, lon1, lat2, lon2)
-
+      const response = await calculateDistanceFromTargetCity(location1, location2)
       // Assert
       expect(response).to.equal(97.69065394711814)
     })

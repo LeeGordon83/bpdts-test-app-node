@@ -17,7 +17,7 @@ afterEach(async () => {
 describe('find users by city function', function () {
   it('expects an array of London users to be returned', async function () {
     // Arrange
-    sandbox.stub(tools, 'userapi').returns(mockedLondonUsers)
+    sandbox.stub(tools, 'callUserApi').returns(mockedLondonUsers)
     // Act
     const response = await usersByCity.findUsersByCity('London')
 

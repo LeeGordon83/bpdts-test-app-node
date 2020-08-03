@@ -1,8 +1,7 @@
-const { userapi } = require('./user-api')
-const { distanceCalculator } = require('./distance-calculator')
+const { callUserApi } = require('./user-api')
+const { checkUserDistances } = require('./distance-calculator')
 
 module.exports = {
-  userapi,
-  distanceCalculator
-
+  callUserApi,
+  checkUserDistances
 }

@@ -1,13 +1,11 @@
 const tools = require('../tools')
+const config = require('../../../server/config/config')
 
-async function findUsersByDistance (city, distance) {
-  const searchstring = '/users'
-  const userData = await tools.userapi(searchstring)
+async function findUsersByDistance () {
+  const queryString = '/users'
+  const userData = await tools.callUserApi(queryString)
   const users = userData.data
-
-  const filteredUsers = await tools.distanceCalculator(users, city, distance)
-
-  return filteredUsers
+  return tools.checkUserDistances(users, config.distanceFromLocation)
 }
 
 module.exports = {

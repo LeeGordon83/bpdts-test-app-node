@@ -4,15 +4,11 @@ const config = require('./server/config/config')
 const port = config.app.port
 
 /**
- *  App Configuration
- */
-
-/**
  * Route Definitions
  */
 
 app.get('/', require('./server/routes/index').get)
 
-app.listen(port)
+app.listen(port, () => console.log(`App is listening on port ${port}`))
 
 module.exports = app

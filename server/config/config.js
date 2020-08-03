@@ -6,9 +6,11 @@ const config = {
   api: {
     base: 'https://bpdts-test-app.herokuapp.com'
   },
-  other: {
-    london: { latitude: 51.509865, longitude: -0.118092 }
-  }
+  cities: {
+    london: { name: 'London', latitude: 51.509865, longitude: -0.118092 }
+  },
+  distanceFromLocation: 50
+
 }
 
 module.exports = config
