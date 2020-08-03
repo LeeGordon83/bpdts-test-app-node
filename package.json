@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "nodemon ./index.js",
     "start": "node index.js",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "nyc --reporter=text mocha \"./test/**/*.spec.js\" --exit"
   },
   "keywords": [],
   "author": "lee-gordon",
   "license": "MIT",
   "devDependencies": {
+    "axios-mock-adapter": "^1.18.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0",
     "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
     "supertest": "^4.0.2"
   },
   "engines": {
@@ -21,11 +24,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "jest": "^26.2.2"
+    "sinon": "^9.0.2"
   },
   "standard": {
     "globals": [
@@ -34,16 +34,9 @@
       "expect",
       "test",
       "afterEach",
-      "jest",
       "beforeAll",
       "afterAll",
       "it"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
     ]
   }
 }
