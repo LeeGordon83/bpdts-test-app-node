@@ -1,2 +1,2 @@
-# bpdts_test_app_node
+# bpdts-test-app-node
 API application to filter a list of users.
