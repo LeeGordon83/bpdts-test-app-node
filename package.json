@@ -4,7 +4,7 @@
   "description": "An API which returns users living in London or withing 50 miles of London",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./index.js",
+    "dev": "nodemon ./index.js", 
     "start": "node index.js",
     "test": "nyc --reporter=text mocha \"./test/**/*.spec.js\" --exit"
   },

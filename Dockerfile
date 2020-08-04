@@ -14,7 +14,7 @@ COPY --chown=node:node package*.json ./
 RUN npm install
 COPY --chown=node:node . .
 USER node
-CMD ["nodemon ./index.js"]
+CMD ["npm", "run", "dev"]
 
 # Production
 FROM development AS production

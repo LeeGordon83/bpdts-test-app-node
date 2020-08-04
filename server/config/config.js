@@ -1,7 +1,7 @@
 
 const config = {
   app: {
-    port: 8000
+    port: process.env.PORT || 8000
   },
   api: {
     base: 'https://bpdts-test-app.herokuapp.com'

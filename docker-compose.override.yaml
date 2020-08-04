@@ -9,6 +9,4 @@ services:
       context: .
       target: development
     image: bpdtstestapp
-    command: >
-      sh -c "
-      nodemon ./index.js"
+

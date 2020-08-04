@@ -107,3 +107,6 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Stores intermediate cache of data that is used for when you eventually run nyc report
+ .nyc_output 
