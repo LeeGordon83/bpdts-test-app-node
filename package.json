@@ -1,7 +1,7 @@
 {
   "name": "bpdts-test-app",
   "version": "1.0.0",
-  "description": "An API which returns users living in London or withing 50 miles of London",
+  "description": "An API which returns users living in London or within 50 miles of London",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./index.js", 

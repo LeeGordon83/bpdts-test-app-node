@@ -5,7 +5,13 @@ const mockedLondonUsers = require('../../mock/london-users')
 const axios = require('axios')
 const MockAdapter = require('axios-mock-adapter')
 
-const mock = new MockAdapter(axios)
+let mock
+let instance
+
+beforeEach(async () => {
+  instance = axios.create()
+  mock = new MockAdapter(instance)
+})
 
 describe('userapiLocation', () => {
   it('Should return London users array', async () => {

@@ -11,7 +11,13 @@ The API has been pushed to a Docker container.
 
 ## Prerequisites
 
-To run locally Node v12+ or to run in container Docker.
+Local: 
+
+  - Node v12+
+
+Container:
+
+  - Docker
 
 ## Dependencies
 Production:
@@ -37,10 +43,10 @@ $ npm install --save-dev
 
 $ nodemon
 
-```
 Navigate to http://localhost:8000/
 
 ```
+
 
 ## Run application in Docker
 
@@ -52,6 +58,20 @@ $ docker-compose build
 $ docker-compose up
 
 Navigate to http://localhost:8000/
+
+```
+
+## Call API
+
+```
+
+Curl -X GET "http://localhost:8000" -H "accept: application/json"
+
+or
+
+Postman (or any other suitable application)
+
+GET http://localhost:8000
 
 ```
 
